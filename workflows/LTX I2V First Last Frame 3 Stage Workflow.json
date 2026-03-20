@@ -1,8 +1,8 @@
 {
   "id": "1143f409-9410-46d0-a303-318c1b2d0391",
   "revision": 0,
-  "last_node_id": 433,
-  "last_link_id": 1061,
+  "last_node_id": 434,
+  "last_link_id": 1064,
   "nodes": [
     {
       "id": 4,
@@ -625,30 +625,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 15,
-      "type": "Note",
-      "pos": [
-        3750,
-        5740
-      ],
-      "size": [
-        210,
-        88
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "LTX Sequencer Note",
-      "properties": {},
-      "widgets_values": [
-        "Use one image at full strength for regular image to video.\n\nIf frame_insert is -1, it will be inserted at the last frame."
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 1,
       "type": "34d63160-e149-4935-ab1f-892ffe617fec",
       "pos": [
@@ -726,7 +702,7 @@
         88
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -734,6 +710,30 @@
       "properties": {},
       "widgets_values": [
         "↓ Select your own models in here ↓"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 15,
+      "type": "Note",
+      "pos": [
+        3550,
+        5800
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "LTX Sequencer Note",
+      "properties": {},
+      "widgets_values": [
+        "Use one image at full strength for regular image to video.\n\nIf frame_insert is -1, it will be inserted at the last frame."
       ],
       "color": "#322",
       "bgcolor": "#533"
@@ -768,15 +768,6 @@
           "type": "INT",
           "widget": {
             "name": "value_1"
-          },
-          "link": null
-        },
-        {
-          "label": "Use Gemma API Text Encode",
-          "name": "value_2",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "value_2"
           },
           "link": null
         }
@@ -864,21 +855,14 @@
           [
             "364",
             "control_after_generate"
-          ],
-          [
-            "-1",
-            "value_2"
           ]
         ],
         "cnr_id": "comfy-core",
         "ver": "0.17.2"
       },
       "widgets_values": [
-        "PROMPT",
-        5,
-        null,
-        null,
-        false
+        "",
+        5
       ],
       "color": "#222",
       "bgcolor": "#000"
@@ -1070,8 +1054,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 433,
-          "lastLinkId": 1061,
+          "lastNodeId": 434,
+          "lastLinkId": 1064,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1662,8 +1646,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 433,
-          "lastLinkId": 1061,
+          "lastNodeId": 434,
+          "lastLinkId": 1064,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2171,8 +2155,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 433,
-          "lastLinkId": 1061,
+          "lastNodeId": 434,
+          "lastLinkId": 1064,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -3356,8 +3340,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 433,
-          "lastLinkId": 1061,
+          "lastNodeId": 434,
+          "lastLinkId": 1064,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -3790,8 +3774,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 433,
-          "lastLinkId": 1061,
+          "lastNodeId": 434,
+          "lastLinkId": 1064,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -5196,8 +5180,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 433,
-          "lastLinkId": 1061,
+          "lastNodeId": 434,
+          "lastLinkId": 1064,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -5206,10 +5190,10 @@
         "inputNode": {
           "id": -10,
           "bounding": [
-            2290,
-            5440,
-            205.580078125,
-            100
+            2340,
+            6080,
+            135.654296875,
+            80
           ]
         },
         "outputNode": {
@@ -5227,12 +5211,12 @@
             "name": "value",
             "type": "STRING",
             "linkIds": [
-              1017
+              1064
             ],
             "label": "Prompt",
             "pos": [
-              2475.580078125,
-              5460
+              2455.654296875,
+              6100
             ]
           },
           {
@@ -5244,21 +5228,8 @@
             ],
             "label": "length (seconds)",
             "pos": [
-              2475.580078125,
-              5480
-            ]
-          },
-          {
-            "id": "da3542a6-954e-4c72-a1ed-8de3ffd0407d",
-            "name": "value_2",
-            "type": "BOOLEAN",
-            "linkIds": [
-              1021
-            ],
-            "label": "Use Gemma API Text Encode",
-            "pos": [
-              2475.580078125,
-              5500
+              2455.654296875,
+              6120
             ]
           }
         ],
@@ -5379,7 +5350,7 @@
               58
             ],
             "flags": {},
-            "order": 16,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -5533,14 +5504,14 @@
               80
             ],
             "flags": {},
-            "order": 15,
+            "order": 14,
             "mode": 0,
             "inputs": [
               {
                 "localized_name": "positive",
                 "name": "positive",
                 "type": "CONDITIONING",
-                "link": 1052
+                "link": 1062
               },
               {
                 "localized_name": "negative",
@@ -5703,29 +5674,6 @@
             "bgcolor": "#000"
           },
           {
-            "id": 427,
-            "type": "Note",
-            "pos": [
-              2850,
-              5470
-            ],
-            "size": [
-              210,
-              100
-            ],
-            "flags": {},
-            "order": 4,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [],
-            "properties": {},
-            "widgets_values": [
-              "These nodes enable improved live previews for LTX\n\n←\n←"
-            ],
-            "color": "#322",
-            "bgcolor": "#533"
-          },
-          {
             "id": 340,
             "type": "LTX2SamplingPreviewOverride",
             "pos": [
@@ -5852,7 +5800,7 @@
               98
             ],
             "flags": {},
-            "order": 5,
+            "order": 4,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -5900,7 +5848,7 @@
               122
             ],
             "flags": {},
-            "order": 6,
+            "order": 5,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -5945,7 +5893,7 @@
                 "localized_name": "conditioning",
                 "name": "conditioning",
                 "type": "CONDITIONING",
-                "link": 1053
+                "link": 1063
               }
             ],
             "outputs": [
@@ -5971,299 +5919,6 @@
               "secondTabWidth": 65
             },
             "widgets_values": [],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
-            "id": 415,
-            "type": "LazySwitchKJ",
-            "pos": [
-              2920,
-              5930
-            ],
-            "size": [
-              270,
-              78
-            ],
-            "flags": {},
-            "order": 18,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "on_false",
-                "name": "on_false",
-                "type": "*",
-                "link": 1055
-              },
-              {
-                "localized_name": "on_true",
-                "name": "on_true",
-                "type": "*",
-                "link": 1012
-              },
-              {
-                "localized_name": "switch",
-                "name": "switch",
-                "type": "BOOLEAN",
-                "widget": {
-                  "name": "switch"
-                },
-                "link": 1016
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "*",
-                "name": "*",
-                "type": "*",
-                "links": [
-                  1052,
-                  1053
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfyui-kjnodes",
-              "ver": "1.3.4",
-              "Node name for S&R": "LazySwitchKJ"
-            },
-            "widgets_values": [
-              false
-            ],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
-            "id": 430,
-            "type": "CLIPTextEncode",
-            "pos": [
-              2920,
-              5800
-            ],
-            "size": [
-              274.3658203125,
-              88
-            ],
-            "flags": {},
-            "order": 20,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip",
-                "name": "clip",
-                "type": "CLIP",
-                "link": 1054
-              },
-              {
-                "localized_name": "text",
-                "name": "text",
-                "type": "STRING",
-                "widget": {
-                  "name": "text"
-                },
-                "link": 1056
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "CONDITIONING",
-                "name": "CONDITIONING",
-                "type": "CONDITIONING",
-                "slot_index": 0,
-                "links": [
-                  1055
-                ]
-              }
-            ],
-            "title": "CLIP Text Encode (Positive Prompt)",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.3.28",
-              "Node name for S&R": "CLIPTextEncode"
-            },
-            "widgets_values": [
-              ""
-            ],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
-            "id": 416,
-            "type": "PrimitiveBoolean",
-            "pos": [
-              2910,
-              6060
-            ],
-            "size": [
-              280,
-              60
-            ],
-            "flags": {},
-            "order": 19,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "value",
-                "name": "value",
-                "type": "BOOLEAN",
-                "widget": {
-                  "name": "value"
-                },
-                "link": 1021
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "BOOLEAN",
-                "name": "BOOLEAN",
-                "type": "BOOLEAN",
-                "links": [
-                  1016
-                ]
-              }
-            ],
-            "title": "Use Gemma API Text Encode",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.17.2",
-              "Node name for S&R": "PrimitiveBoolean"
-            },
-            "widgets_values": [
-              false
-            ],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
-            "id": 419,
-            "type": "LatentUpscaleModelLoader",
-            "pos": [
-              2560,
-              6320
-            ],
-            "size": [
-              330,
-              58
-            ],
-            "flags": {},
-            "order": 7,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "localized_name": "LATENT_UPSCALE_MODEL",
-                "name": "LATENT_UPSCALE_MODEL",
-                "type": "LATENT_UPSCALE_MODEL",
-                "links": [
-                  1034
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.16.4",
-              "Node name for S&R": "LatentUpscaleModelLoader"
-            },
-            "widgets_values": [
-              "ltx-2.3-spatial-upscaler-x2-1.0.safetensors"
-            ],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
-            "id": 362,
-            "type": "GemmaAPITextEncode",
-            "pos": [
-              2560,
-              6110
-            ],
-            "size": [
-              300,
-              160
-            ],
-            "flags": {},
-            "order": 14,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "prompt",
-                "name": "prompt",
-                "type": "STRING",
-                "widget": {
-                  "name": "prompt"
-                },
-                "link": 1057
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "conditioning",
-                "name": "conditioning",
-                "type": "CONDITIONING",
-                "links": [
-                  1012
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "ComfyUI-LTXVideo",
-              "ver": "49add6dddb2e1bb2d23bc509a9fac3edd2834961",
-              "Node name for S&R": "GemmaAPITextEncode"
-            },
-            "widgets_values": [
-              "KEY",
-              "",
-              "ID",
-              false
-            ],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
-            "id": 366,
-            "type": "PrimitiveStringMultiline",
-            "pos": [
-              2230,
-              6120
-            ],
-            "size": [
-              300,
-              160
-            ],
-            "flags": {},
-            "order": 17,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "value",
-                "name": "value",
-                "type": "STRING",
-                "widget": {
-                  "name": "value"
-                },
-                "link": 1017
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "STRING",
-                "name": "STRING",
-                "type": "STRING",
-                "links": [
-                  1056,
-                  1057
-                ]
-              }
-            ],
-            "title": "Prompt",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.16.4",
-              "Node name for S&R": "PrimitiveStringMultiline"
-            },
-            "widgets_values": [
-              "PROMPT"
-            ],
             "color": "#222",
             "bgcolor": "#000"
           },
@@ -6353,6 +6008,120 @@
             ],
             "color": "#222",
             "bgcolor": "#000"
+          },
+          {
+            "id": 430,
+            "type": "CLIPTextEncode",
+            "pos": [
+              2910,
+              5950
+            ],
+            "size": [
+              274.3658203125,
+              88
+            ],
+            "flags": {},
+            "order": 16,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 1054
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 1064
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "slot_index": 0,
+                "links": [
+                  1062,
+                  1063
+                ]
+              }
+            ],
+            "title": "CLIP Text Encode (Positive Prompt)",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.28",
+              "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+              ""
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+          },
+          {
+            "id": 419,
+            "type": "LatentUpscaleModelLoader",
+            "pos": [
+              2560,
+              6110
+            ],
+            "size": [
+              330,
+              58
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "LATENT_UPSCALE_MODEL",
+                "name": "LATENT_UPSCALE_MODEL",
+                "type": "LATENT_UPSCALE_MODEL",
+                "links": [
+                  1034
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.16.4",
+              "Node name for S&R": "LatentUpscaleModelLoader"
+            },
+            "widgets_values": [
+              "ltx-2.3-spatial-upscaler-x2-1.0.safetensors"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+          },
+          {
+            "id": 434,
+            "type": "Note",
+            "pos": [
+              2330,
+              5570
+            ],
+            "size": [
+              210,
+              100
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "properties": {},
+            "widgets_values": [
+              "You can disable/delete the LTX2 Sampling Preview and Tiny VaeLoader nodes if you don't want previews enabled."
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
           }
         ],
         "groups": [],
@@ -6438,44 +6207,12 @@
             "type": "NOISE"
           },
           {
-            "id": 1012,
-            "origin_id": 362,
-            "origin_slot": 0,
-            "target_id": 415,
-            "target_slot": 1,
-            "type": "CONDITIONING"
-          },
-          {
-            "id": 1016,
-            "origin_id": 416,
-            "origin_slot": 0,
-            "target_id": 415,
-            "target_slot": 2,
-            "type": "BOOLEAN"
-          },
-          {
-            "id": 1017,
-            "origin_id": -10,
-            "origin_slot": 0,
-            "target_id": 366,
-            "target_slot": 0,
-            "type": "STRING"
-          },
-          {
             "id": 1018,
             "origin_id": -10,
             "origin_slot": 1,
             "target_id": 365,
             "target_slot": 0,
             "type": "INT"
-          },
-          {
-            "id": 1021,
-            "origin_id": -10,
-            "origin_slot": 2,
-            "target_id": 416,
-            "target_slot": 0,
-            "type": "BOOLEAN"
           },
           {
             "id": 1034,
@@ -6510,22 +6247,6 @@
             "type": "MODEL"
           },
           {
-            "id": 1052,
-            "origin_id": 415,
-            "origin_slot": 0,
-            "target_id": 363,
-            "target_slot": 0,
-            "type": "CONDITIONING"
-          },
-          {
-            "id": 1053,
-            "origin_id": 415,
-            "origin_slot": 0,
-            "target_id": 361,
-            "target_slot": 0,
-            "type": "CONDITIONING"
-          },
-          {
             "id": 1054,
             "origin_id": 413,
             "origin_slot": 0,
@@ -6534,36 +6255,36 @@
             "type": "CLIP"
           },
           {
-            "id": 1055,
-            "origin_id": 430,
-            "origin_slot": 0,
-            "target_id": 415,
-            "target_slot": 0,
-            "type": "CONDITIONING"
-          },
-          {
-            "id": 1056,
-            "origin_id": 366,
-            "origin_slot": 0,
-            "target_id": 430,
-            "target_slot": 1,
-            "type": "STRING"
-          },
-          {
-            "id": 1057,
-            "origin_id": 366,
-            "origin_slot": 0,
-            "target_id": 362,
-            "target_slot": 0,
-            "type": "STRING"
-          },
-          {
             "id": 1061,
             "origin_id": 344,
             "origin_slot": 0,
             "target_id": -20,
             "target_slot": 0,
             "type": "MODEL"
+          },
+          {
+            "id": 1062,
+            "origin_id": 430,
+            "origin_slot": 0,
+            "target_id": 363,
+            "target_slot": 0,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 1063,
+            "origin_id": 430,
+            "origin_slot": 0,
+            "target_id": 361,
+            "target_slot": 0,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 1064,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 430,
+            "target_slot": 1,
+            "type": "STRING"
           }
         ],
         "extra": {
@@ -6575,8 +6296,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 433,
-          "lastLinkId": 1061,
+          "lastNodeId": 434,
+          "lastLinkId": 1064,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -6815,8 +6536,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 433,
-          "lastLinkId": 1061,
+          "lastNodeId": 434,
+          "lastLinkId": 1064,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -7667,10 +7388,10 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.9090909090909092,
+      "scale": 0.685984251968504,
       "offset": [
-        -2841.508309999999,
-        -5622.034369999999
+        -2358.63943003907,
+        -5429.418995337224
       ]
     }
   },
