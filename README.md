@@ -49,7 +49,7 @@ It also has a sync feature that syncs all LTX Keyframer nodes together in realti
 
 
 ## 💡 Workflows
-<img width="2720" height="930" alt="LTX I2V First Last Frame 3 Stage Workflow" src="https://github.com/user-attachments/assets/2fee0149-4eaa-4822-811a-855ce4fe078d" />
+<img width="2720" height="930" alt="LTX I2V First Last Frame 3 Stage Workflow v2" src="https://github.com/user-attachments/assets/14e79336-d2a9-4b0f-a782-fdfeb7aa85da" />
 
 This is a compact LTX 2.3 workflow for I2V and First Frame, Middle Frame, Last frame video generation.
 I seperated and organized everything into subraphs to make things as clean as possible, and added toggles to customize the workflow quickly.
