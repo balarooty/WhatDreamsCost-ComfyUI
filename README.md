@@ -18,6 +18,8 @@ All of my nodes are created with the help of AI, so there may or may not be redu
 ## 🔄 Recent Updates
 I've updated the workflows to have less dependancies. I've removed the CacheDiT and IAMCCS vae decode nodes.
 
+# ⚙️ Custom Nodes
+
 ## Multi Image Loader
 ![Multi_Image_Loader_GIF](https://github.com/user-attachments/assets/71924103-92a6-4c1e-b67a-064dcbcce781)
 
@@ -47,7 +49,7 @@ It also has a sync feature that syncs all LTX Keyframer nodes together in realti
 
 
 ## 💡 Workflows
-<img width="2720" height="990" alt="LTX IMG2VIDEO FIRST MIDDLE LAST FRAME 3 STAGE OPTIMIZED WORKFLOW v3" src="https://github.com/user-attachments/assets/64ba23d8-4936-40bf-a431-741749f2a361" />
+<img width="2720" height="930" alt="LTX I2V First Last Frame 3 Stage Workflow" src="https://github.com/user-attachments/assets/2fee0149-4eaa-4822-811a-855ce4fe078d" />
 
 This is a compact LTX 2.3 workflow for I2V and First Frame, Middle Frame, Last frame video generation.
 I seperated and organized everything into subraphs to make things as clean as possible, and added toggles to customize the workflow quickly.
@@ -61,7 +63,7 @@ Or drag and drop image into ComfyUI to import workflow.
 - Rearranging images sometimes gets finicky. I'll try and fix this soon. It may be due to my ComfyUI frontend not matching the backend.
 
 **LTX Sequencer and LTX Keyframer**
-- Will randomly re-arrange the widget values when loading workflows. It happens very rarely, and for some reason only happens to 1 node. It can be reversed by just re-syncing it with another node.
+- Will randomly swap the widget values when loading workflows. It happens very rarely, and for some reason only happens to 1 node. It can be reversed by just re-syncing it with another node.
 
 It may also be due to my ComfyUI frontend not matching the backend (that has been causing other issues with ComfyUI, still waiting for ComfyUI to fix the issues with latest version)
 
