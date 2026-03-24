@@ -1,10 +1,11 @@
-import torch
-import numpy as np
-from PIL import Image, ImageOps
-import os
 import glob
-import folder_paths
 import io as stdio
+import os
+
+import folder_paths
+import numpy as np
+import torch
+from PIL import Image, ImageOps
 
 # Module-level constant for maximum images (backend output slot count)
 MAX_IMAGES = 50
@@ -24,13 +25,14 @@ def _list_input_subfolders():
     """List subdirectories inside ComfyUI's input directory for the folder browser."""
     input_dir = folder_paths.get_input_directory()
     try:
-        entries = ["(none)"] + sorted(
-            d for d in os.listdir(input_dir)
+        entries = ["(none)", ""] + sorted(
+            d
+            for d in os.listdir(input_dir)
             if os.path.isdir(os.path.join(input_dir, d))
         )
         return entries
     except Exception:
-        return ["(none)"]
+        return ["(none)", ""]
 
 
 def _scan_folder_for_images(folder_path):
@@ -53,8 +55,14 @@ class MultiImageLoader:
                 "width": ("INT", {"default": 0, "min": 0, "max": 8192, "step": 1}),
                 "height": ("INT", {"default": 0, "min": 0, "max": 8192, "step": 1}),
                 "upscale_method": (["lanczos", "bilinear", "nearest-exact"],),
-                "divisible_by": ("INT", {"default": 32, "min": 1, "max": 512, "step": 1}),
-                "img_compression": ("INT", {"default": 18, "min": 0, "max": 100, "step": 1}),
+                "divisible_by": (
+                    "INT",
+                    {"default": 32, "min": 1, "max": 512, "step": 1},
+                ),
+                "img_compression": (
+                    "INT",
+                    {"default": 18, "min": 0, "max": 100, "step": 1},
+                ),
             },
             "optional": {
                 "input_folder": (_list_input_subfolders(),),
@@ -64,24 +72,45 @@ class MultiImageLoader:
         }
 
     RETURN_TYPES = ("IMAGE",) * (MAX_IMAGES + 1) + ("STRING",)
-    RETURN_NAMES = ("multi_output",) + tuple(f"image_{i+1}" for i in range(MAX_IMAGES)) + ("captions",)
+    RETURN_NAMES = (
+        ("multi_output",)
+        + tuple(f"image_{i + 1}" for i in range(MAX_IMAGES))
+        + ("captions",)
+    )
     FUNCTION = "load_images"
     CATEGORY = "image"
 
-    def load_images(self, image_paths, width, height, upscale_method, divisible_by, img_compression,
-                    input_folder="(none)", import_folder=False, captions=""):
+    def load_images(
+        self,
+        image_paths,
+        width,
+        height,
+        upscale_method,
+        divisible_by,
+        img_compression,
+        input_folder="(none)",
+        import_folder=False,
+        captions="",
+    ):
+        # Normalise empty string to "(none)" — workflows saved on other machines may store ""
+        if not input_folder:
+            input_folder = "(none)"
         results = []
         valid_paths = [p.strip() for p in image_paths.split("\n") if p.strip()]
 
         # If folder import is enabled, prepend images from the selected input subfolder
         if import_folder and input_folder and input_folder != "(none)":
-            folder_full_path = os.path.join(folder_paths.get_input_directory(), input_folder)
+            folder_full_path = os.path.join(
+                folder_paths.get_input_directory(), input_folder
+            )
             folder_images = _scan_folder_for_images(folder_full_path)
             # Prepend folder images (they go before manually added ones)
             valid_paths = folder_images + valid_paths
 
         # Parse captions (one per line, parallel to image_paths)
-        caption_list = [c.strip() for c in captions.split("\n")] if captions.strip() else []
+        caption_list = (
+            [c.strip() for c in captions.split("\n")] if captions.strip() else []
+        )
 
         # Track the dimensions of the first processed image
         first_target_w, first_target_h = None, None
@@ -133,7 +162,11 @@ class MultiImageLoader:
                 # Compression
                 if img_compression > 0:
                     img_byte_arr = stdio.BytesIO()
-                    image.save(img_byte_arr, format="JPEG", quality=max(1, 100 - img_compression))
+                    image.save(
+                        img_byte_arr,
+                        format="JPEG",
+                        quality=max(1, 100 - img_compression),
+                    )
                     image = Image.open(img_byte_arr)
 
                 image_np = np.array(image).astype(np.float32) / 255.0
@@ -162,7 +195,9 @@ class MultiImageLoader:
 
         # Pad captions to match image count
         padded_captions = caption_list + [""] * (len(valid_paths) - len(caption_list))
-        captions_output = "\n".join(padded_captions[:len(valid_paths)]) if valid_paths else ""
+        captions_output = (
+            "\n".join(padded_captions[: len(valid_paths)]) if valid_paths else ""
+        )
 
         # Return: multi batch output, individual padded items, captions string
         return (multi_output, *padded_results[:MAX_IMAGES], captions_output)
